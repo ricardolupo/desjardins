@@ -7,3 +7,5 @@
 log 'this is a test'
 
 log 'this is another test'
+
+log 'this is yet another test'
