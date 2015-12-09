@@ -1,6 +1,10 @@
 ---
 driver:
-  name: vagrant
+  name: ssh
+  hostname: 10.0.0.1
+  port: 22
+  username: root
+  ssh_key: /Users/rlupo/.ssh/rlupo_aws_sa.pem
 
 provisioner:
   name: chef_zero
