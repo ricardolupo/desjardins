@@ -1,9 +1,9 @@
 ---
 driver:
   name: ssh
-  hostname: 10.0.0.1
+  hostname: 52.90.137.115
   port: 22
-  username: root
+  username: ec2-user
   ssh_key: /Users/rlupo/.ssh/rlupo_aws_sa.pem
 
 provisioner:
@@ -15,9 +15,14 @@ provisioner:
 #   name: inspec
 
 platforms:
-  - name: ubuntu-14.04
-  - name: centos-7.1
+  - name: solaris10
+    driver:
+      hostname: 52.90.137.115
 
+  - name: solaris11
+    driver:
+      hostname: 52.90.137.115
+      
 suites:
   - name: default
     run_list:
