@@ -1,7 +1,7 @@
 ---
 driver:
-  name: ssh
-  hostname: 52.90.137.115
+  name: ssh_gzip
+  hostname: 54.152.176.160
   port: 22
   username: ec2-user
   ssh_key: /Users/rlupo/.ssh/rlupo_aws_sa.pem
@@ -17,12 +17,12 @@ provisioner:
 platforms:
   - name: solaris10
     driver:
-      hostname: 52.90.137.115
+      hostname: 54.152.176.160
 
   - name: solaris11
     driver:
-      hostname: 52.90.137.115
-      
+      hostname: 54.152.176.160
+
 suites:
   - name: default
     run_list:

@@ -4,8 +4,24 @@
 #
 # Copyright (c) 2015 The Authors, All Rights Reserved.
 
-log 'this is a test'
+package 'httpd' do
+  action :install
+end
 
-log 'this is another test'
+log 'Apache installed'
 
-log 'this is yet another test'
+template '/var/www/html/index.html' do
+  source 'index.html.erb'
+  owner 'root'
+  group 'root'
+  mode 0744
+end
+
+log 'Website setup'
+
+service 'httpd' do
+  supports status: true
+  action [:enable, :start]
+end
+
+log "and we're done"
